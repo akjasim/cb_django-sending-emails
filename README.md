@@ -13,11 +13,11 @@ Malayalam:
 
 ```python
 #### settings.py
-EMAIL_HOST = ‘smtp.gmail.com’
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = ‘your_account@gmail.com’
-EMAIL_HOST_PASSWORD = ‘your app password’
+EMAIL_HOST_USER = 'your_account@gmail.com'
+EMAIL_HOST_PASSWORD = 'your app password'
 ```
 3. Make a simple Form.
 ```python
@@ -27,13 +27,14 @@ from django import forms
 
 class SubscribeForm(forms.Form):
     email = forms.EmailField()
-
-    def __str__(self):
-        return self.email
 ```
 4. Make a simple View to handle sending Emails.
 ```python
 #### views.py
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+from django.conf import settings
 from subscriptions.forms import SubscribeForm
 
 
