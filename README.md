@@ -8,7 +8,7 @@ Malayalam:
 
 ## Usage
 
-1) Enable Two Factor Authentication and setup an App Password.
+1) Enable Two Factor Authentication and setup an App Password in Gmail.
 2) Set Email Configurations.
 
 ```python
