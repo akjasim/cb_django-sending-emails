@@ -47,7 +47,7 @@ def subscribe(request):
             message = 'Sending Email through Gmail'
             recipient = form.cleaned_data.get('email')
             send_mail(subject, 
-              message, EMAIL_HOST_USER, [recipient], fail_silently = False)
+              message, settings.EMAIL_HOST_USER, [recipient], fail_silently=False)
             messages.success(request, 'Success!')
             return redirect('subscribe')
     return render(request, 'subscriptions/home.html', {'form': form})
