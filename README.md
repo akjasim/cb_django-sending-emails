@@ -2,9 +2,8 @@
 
 Part of YouTube Video.
 
-English :
-
-Malayalam: 
+English : https://youtu.be/TZL-WFzvDJg
+Malayalam : https://youtu.be/3S326ioW3gE
 
 ## Usage
 
